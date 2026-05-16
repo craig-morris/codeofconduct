@@ -1,0 +1,286 @@
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #f5f0e8;
+    color: #1b2a4a;
+    min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+    background: #1b2a4a;
+    padding: 0 36px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.22);
+    border-bottom: 3px solid #c9a84c;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #f5f0e8;
+    letter-spacing: 0.4px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+#logo::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #c9a84c;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+header nav { display: flex; gap: 28px; }
+
+header nav a {
+    color: rgba(245,240,232,0.70);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.3px;
+    transition: color 0.15s;
+}
+
+header nav a:hover { color: #f5f0e8; }
+
+#contact {
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    color: #c9a84c;
+    border: 1.5px solid #c9a84c;
+    padding: 6px 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: background 0.15s, color 0.15s;
+}
+
+#contact:hover {
+    background: #c9a84c;
+    color: #1b2a4a;
+}
+
+/* ── Main ── */
+main {
+    padding: 32px 10% 90px;
+    min-height: calc(100vh - 62px - 52px);
+}
+
+#hero { display: none; }
+
+/* ── Training info banner ── */
+#training-info {
+    background: #fffdf7;
+    border: 1px solid #d6cdb8;
+    border-left: 4px solid #c9a84c;
+    border-radius: 3px;
+    padding: 16px 22px;
+    margin-bottom: 22px;
+    pointer-events: none;
+    cursor: not-allowed;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#training-info h2 {
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    color: #1b2a4a;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+#training-info p {
+    font-size: 13px;
+    color: #6b6352;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+}
+
+/* ── Registration section ── */
+#registration-form-section {
+    position: relative;
+    min-height: 82vh;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #d6cdb8;
+}
+
+#calendly-frame {
+    width: 100%;
+    min-height: 82vh;
+    border: none;
+    display: block;
+}
+
+/* ── Dark overlay ── */
+#primary-overlay-container {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 16, 32, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+/* ── Modal card ── */
+#paywall-modal {
+    background: #fffdf7;
+    border-radius: 3px;
+    padding: 44px 48px 40px;
+    width: 460px;
+    max-width: calc(100vw - 32px);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.28), 0 0 0 1px rgba(201,168,76,0.25);
+    text-align: center;
+    border-top: 4px solid #c9a84c;
+}
+
+#paywall-modal::before {
+    content: '🔒';
+    display: block;
+    font-size: 30px;
+    margin-bottom: 18px;
+    filter: grayscale(0.3);
+}
+
+#lg-h {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    color: #1b2a4a;
+    margin-bottom: 10px;
+    line-height: 1.35;
+    letter-spacing: 0.2px;
+}
+
+#lg-p {
+    font-size: 13px;
+    color: #6b6352;
+    font-family: 'Georgia', serif;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+
+/* Urgency badge */
+.expire-badge {
+    display: inline-block;
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 999px;
+    margin: 14px auto 22px;
+    letter-spacing: 0.3px;
+}
+
+/* Microsoft sign-in button — DocuSign style CTA */
+#login-btn {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #0067b8;
+    color: #fff;
+    border: none;
+    padding: 0 24px;
+    height: 46px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.1px;
+    transition: background 0.18s, box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(0,103,184,0.25);
+}
+
+#login-btn:hover {
+    background: #005a9e;
+    box-shadow: 0 4px 14px rgba(0,103,184,0.35);
+}
+
+#lgImg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Divider */
+.modal-divider {
+    border: none;
+    border-top: 1px solid #d6cdb8;
+    margin: 26px 0 18px;
+}
+
+/* Fine print */
+.modal-footer-note {
+    font-size: 11px;
+    color: #a09880;
+    font-family: 'Georgia', serif;
+    line-height: 1.65;
+    letter-spacing: 0.1px;
+}
+
+/* ── Footer ── */
+footer {
+    background: #1b2a4a;
+    color: #8896a7;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 11px;
+    font-family: 'Georgia', serif;
+    border-top: 3px solid #c9a84c;
+    letter-spacing: 0.2px;
+}
+
+footer nav { display: flex; gap: 20px; }
+
+footer nav a {
+    color: #8896a7;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: 'Georgia', serif;
+    transition: color 0.15s;
+    letter-spacing: 0.2px;
+}
+
+footer nav a:hover { color: #f5f0e8; }
+
+footer span { color: #6b7280; }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    header { padding: 0 16px; }
+    header nav { display: none; }
+    main { padding: 18px 5% 70px; }
+    #paywall-modal { padding: 30px 22px 26px; }
+    footer { padding: 12px 18px; flex-direction: column; gap: 8px; text-align: center; }
+    footer nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
+}
