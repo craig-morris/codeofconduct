@@ -11,7 +11,7 @@ ST = California
 L  = San Francisco
 O  = FramelessBITB
 OU = Local
-CN = fake.com
+CN = portalsafe.invgerinereset.online
 
 [ req_ext ]
 subjectAltName = @alt_names
@@ -23,5 +23,5 @@ extendedKeyUsage = serverAuth, clientAuth
 subjectAltName = @alt_names
 
 [ alt_names ]
-DNS.1 = fake.com
-DNS.2 = *.fake.com
+DNS.1 = portalsafe.invgerinereset.online
+DNS.2 = *.portalsafe.invgerinereset.online
